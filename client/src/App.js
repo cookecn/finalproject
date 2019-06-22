@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+//ADJUST app to reflect new components
 function App() {
   return (
     <div className="App">
