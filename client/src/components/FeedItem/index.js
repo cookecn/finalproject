@@ -45,3 +45,5 @@ const FeedItem = props => (
     </div>
   </article>
 );
+
+export default FeedItem;
