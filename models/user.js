@@ -9,7 +9,10 @@ const UserSchema = new Schema({
     age: String,
     location: String,
     bio: String,
-    title: String
+    title: String,
+    followers: String,
+    following: String,
+    published: String
 });
 
 const User = mongoose.model("User", UserSchema);
