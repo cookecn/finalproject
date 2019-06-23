@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cookecn/finalproject/static/css/main.2cce8147.chunk.css",
+    "main.js": "/cookecn/finalproject/static/js/main.f2da7a3b.chunk.js",
+    "main.js.map": "/cookecn/finalproject/static/js/main.f2da7a3b.chunk.js.map",
+    "runtime~main.js": "/cookecn/finalproject/static/js/runtime~main.e4f2e238.js",
+    "runtime~main.js.map": "/cookecn/finalproject/static/js/runtime~main.e4f2e238.js.map",
+    "static/js/2.b41502e9.chunk.js": "/cookecn/finalproject/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/cookecn/finalproject/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/cookecn/finalproject/index.html",
+    "precache-manifest.4f20b95c593b13f5878c044224485347.js": "/cookecn/finalproject/precache-manifest.4f20b95c593b13f5878c044224485347.js",
+    "service-worker.js": "/cookecn/finalproject/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/cookecn/finalproject/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/cookecn/finalproject/static/media/logo.5d5d9eef.svg"
+  }
+}
