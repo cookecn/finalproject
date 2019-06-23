@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+//const routes = require("./routes");
 //const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
 //const concurrently = require('concurrently');
@@ -29,7 +29,7 @@ app.use(passport.initialize());
 
 require("./config/passport") (passport);
 
-app.use("/api/users", users);
+app.use("../routes/api/users", users);
 
 // Connect to the Mongo DB
 mongoose.connect(db, { useNewUrlParser: true } )
