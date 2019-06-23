@@ -26,22 +26,10 @@ mongoose.connect(db, { useNewUrlParser: true } )
 .then(() => console.log("MongoDb successfully connected"))
 .catch(err => console.log(err));
 
-let Message = mongoose.model('Message', { name: String, message: String});
+//let Message = mongoose.model('Message', { name: String, message: String});
 
-app.get('/messages', (req, res) {
-  Message.find({},(err, messages) => {
-    res.send(messages);
-  })
-});
 
-app.post('/messages', (req,res) {
-  var message = new Message(req.body);
-  message.save((err) => {
-    if(err) 
-      sendStatus(500);
-      res.sendStatus(200);
-  })
-});
+app.get('/', )
 
 // Add routes, both API and view
 app.use(passport.initialize());
