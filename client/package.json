@@ -1,6 +1,6 @@
 {
-  "name": "client",
-  "version": "1.0.0",
+  "name": "finalproject",
+  "version": "0.1.0",
   "engines": {
     "node": "10.14.2"
   },
@@ -24,8 +24,7 @@
     "validator": "^11.0.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,18 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cookecn/finalproject.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cookecn/finalproject/issues"
-  },
-  "homepage": "https://github.com/cookecn/finalproject#readme"
+  }
 }
-
