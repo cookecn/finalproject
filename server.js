@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const path = require('path');
 
 
 const users = require("./routes/api/users");
@@ -16,6 +17,10 @@ app.use(bodyParser.json());
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
 }
 
 //db config
@@ -28,15 +33,15 @@ mongoose.connect(db, { useNewUrlParser: true } )
 
 //let Message = mongoose.model('Message', { name: String, message: String});
 
-
-app.get('/', )
-
 // Add routes, both API and view
 app.use(passport.initialize());
 
 require("./config/passport") (passport);
 
 app.use("/api/users", users);
+
+//Serve static assets if in production
+
 
 const PORT = process.env.PORT || 5000;
 
