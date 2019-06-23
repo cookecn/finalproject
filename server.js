@@ -1,23 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
-//const routes = require("./routes");
-//const bcrypt = require('bcryptjs');
 const bodyParser = require('body-parser');
-//const concurrently = require('concurrently');
-//const isEmpty = require('is-empty');
-//const jsonwebtoken = require('jsonwebtoken');
 const passport = require('passport');
-//const passportJwt = require('passport-jwt');
-//const validator = require('validator');
+
 
 const users = require("./routes/api/users");
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 //bodyparser middleware
 app.use(bodyParser.urlencoded({
   extended: false
-})
+  })
 );
 app.use(bodyParser.json());
 
@@ -28,17 +21,19 @@ if (process.env.NODE_ENV === "production") {
 //db config
 const db = require("./config/keys").mongoURI;
 
+// Connect to the Mongo DB
+mongoose.connect(db, { useNewUrlParser: true } )
+.then(() => console.log("MongoDb successfully connected"))
+.catch(err => console.log(err));
+
 // Add routes, both API and view
 app.use(passport.initialize());
 
 require("./config/passport") (passport);
 
-app.use("../routes/api/users", users);
+app.use("/api/users", users);
 
-// Connect to the Mongo DB
-mongoose.connect(db, { useNewUrlParser: true } )
-.then(() => console.log("MongoDb successfully connected"))
-.catch(err => console.log(err));
+const PORT = process.env.PORT || 5000;
 
 // Start the API server
 app.listen(PORT, function() {
